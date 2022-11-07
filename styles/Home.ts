@@ -1,32 +1,38 @@
 import styled from "styled-components";
-import background from '../public/background.png'
 
+export const HeaderContainer = styled.header`
+  display: flex;
+  align-items: center;
+  padding: 2.5rem 2rem;
+  background-color: #000;
+`;
 
 export const HomeContainer = styled.div`
-.titleContainer {
-    width: auto;
-    height: 100%;
-    margin-top: 3rem;
+  .titleContainer {
     display: flex;
+    margin-top: 3rem;
+    align-items: center;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+
+    h1 {
+      font-size: 6rem;
+    }
   }
 
   .content {
-    width: 100%;
     display: flex;
-    margin-top: 3rem;
+    justify-content: center;
+    gap: 6rem;
+    margin-top: 4.5rem;
 
     .card {
-      width: 30rem;
-      border: 1px #CBCBCB solid;
-      border-radius: 5px;
-      margin-right: 60px;
-      padding: 2rem;
-
+      width: 45rem;
       display: flex;
+      padding: 2rem 4rem;
+      border-radius: 5px;
       flex-direction: column;
+      border: 1px rgba(155, 155, 155, 0.23) solid;
       justify-content: flex-start;
 
       -webkit-box-shadow: 0px 14px 30px -17px #6e6e6e;
@@ -35,34 +41,44 @@ export const HomeContainer = styled.div`
 
       img {
         width: 100%;
-        height: 200px;
+        height: 19rem;
+      }
+
+      p {
+        line-height: 2;
+      }
+      p:last-child {
+        margin-top: 2rem;
       }
     }
 
     .aboutNext {
       width: 60%;
       display: flex;
-      flex-direction: column;
       align-items: center;
+      flex-direction: column;
+
+      p {
+        line-height: 2;
+      }
+      p:first-child {
+        margin-bottom: 2rem;
+      }
     }
 
     .divider {
-      width: 20rem;
-      height: 2px;
-      background-color: #9B9B9B;
-      margin: 2rem 0;
+      width: 70%;
+      height: 1px;
+      margin: 5rem 0;
+      background-color: rgba(155, 155, 155, 0.23);
     }
 
     .buttonsContainer {
+      gap: 2rem;
       display: flex;
-      gap: 20px;
       flex-wrap: wrap;
+      justify-self: flex-end;
+      align-self: flex-start;
     }
   }
-`;
-
-export const HeaderContainer = styled.header`
-  width: 100%;
-  background-color: #000;
-  padding: 10px 75px;
 `;
